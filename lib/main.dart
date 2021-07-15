@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       child = CustomDrawer(child: child);
     }
     return MaterialApp(
-      title: 'AirLine Reservation',
+      title: 'Just Fly',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
