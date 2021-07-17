@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:framy_annotation/framy_annotation.dart';
 import 'display/header.dart';
 import 'display/title.dart';
-import 'package:flight_booking/constants.dart';
 import 'package:flight_booking/add_flight_screen.dart';
 import 'package:flight_booking/display/flight.dart';
 

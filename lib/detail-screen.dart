@@ -5,7 +5,6 @@ import 'package:flight_booking/display/plane_curve.dart';
 import 'package:flight_booking/display/detail.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:dotted_line/dotted_line.dart';
-// import 'package:barcode_flutter/barcode_flutter.dart';
 
 class DetailScreen extends StatefulWidget {
   static const String id = 'detail_screen';
@@ -91,7 +90,6 @@ class _DetailScreenState extends State<DetailScreen> {
 
   Widget profileimg() {
     return Card(
-      //color: Colors.black,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(16.0),
@@ -108,15 +106,6 @@ class _DetailScreenState extends State<DetailScreen> {
           bottomRight: Radius.circular(12.0),
         ),
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        // child: Image.asset(
-        //   'assets/Woman.jpeg',
-        //   height: MediaQuery.of(context).size.height * 0.07,
-        //   width: MediaQuery.of(context).size.width * 0.14,
-        //   fit: BoxFit.cover,
-        //   //color: Color(0xFF0C382E),
-        //   filterQuality: FilterQuality.medium,
-        //   colorBlendMode: BlendMode.color,
-        // ),
       ),
     );
   }

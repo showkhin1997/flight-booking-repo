@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:emirates_app/display/detail.dart';
 
 class TestDraw extends StatelessWidget {
   static const String id = 'testdraw';
@@ -25,15 +24,6 @@ class TestDraw extends StatelessWidget {
                     color: Colors.deepOrangeAccent,
                   )),
             ),
-            // ClipPath(
-            //   clipper: CurveContainer(),
-            //   child: Container(
-            //     // margin: EdgeInsets.symmetric(horizontal: 20.0),
-            //     color: Colors.deepOrangeAccent,
-            //     height: 500.0,
-            //     width: 320.0,
-            //   ),
-            // ),
           ],
         ),
       ),

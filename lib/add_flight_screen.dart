@@ -6,8 +6,6 @@ import 'package:flight_booking/Route_page.dart';
 import 'package:flight_booking/flight_pageview.dart';
 import 'package:flight_booking/seat_page.dart';
 import 'package:flight_booking/checkout_page.dart';
-// import 'package:emirates_app/display/select_bar.dart';
-// import 'package:flutter_icons/flutter_icons.dart';
 
 class AddFlightScreen extends StatefulWidget {
   static const String id = 'add_flight_screen';

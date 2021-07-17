@@ -73,8 +73,6 @@ class _FlightPageViewState extends State<FlightPageView> {
     );
   }
 
-  // bool changeCardColor = false;
-
   Card card(Widget svgEmiratesImage, bool changeCardColor) {
     return Card(
       margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),

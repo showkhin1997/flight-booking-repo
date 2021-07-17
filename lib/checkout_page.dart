@@ -9,14 +9,6 @@ class CheckOutPage extends StatefulWidget {
 }
 
 class _CheckOutPageState extends State<CheckOutPage> {
-  // bool pressbutton = false;
-
-  // onButtonClick() {
-  //   setState(() {
-  //     pressbutton = !pressbutton;
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -111,7 +111,6 @@ class _RoutePageState extends State<RoutePage> {
 
   Widget _buildTrip() {
     return Container(
-      // padding: EdgeInsets.only(bottom: 0.3),
       child: Column(
         children: <Widget>[
           Row(

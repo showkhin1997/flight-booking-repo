@@ -28,15 +28,6 @@ class _FlightState extends State<Flight> {
     );
   }
 
-  // for (DisplayFlight displayFlight in flights)
-  //           fullFlightList(displayFlight)
-
-  // Widget _checkLastItem() {
-  //   if () {
-
-  //   }
-  // }
-
   Widget fullFlightList(DisplayFlight displayFlight) {
     return Column(
       children: [

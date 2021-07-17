@@ -116,7 +116,6 @@ class CustomGuitarDrawerState extends State<CustomGuitarDrawer>
   }
 
   void _onDragEnd(DragEndDetails details) {
-    //I have no idea what it means, copied from Drawer
     double _kMinFlingVelocity = 365.0;
 
     if (animationController.isDismissed || animationController.isCompleted) {

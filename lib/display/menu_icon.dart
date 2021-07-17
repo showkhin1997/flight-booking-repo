@@ -41,5 +41,3 @@ class MenuIcon extends StatelessWidget {
     );
   }
 }
-
-// Use material keybord Arrow up.
