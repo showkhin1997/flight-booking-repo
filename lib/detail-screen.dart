@@ -17,7 +17,7 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kMainColor,
+      backgroundColor: Colors.blue[900],
       body: SafeArea(
         child: Padding(
           padding:
@@ -122,9 +122,9 @@ class _DetailScreenState extends State<DetailScreen> {
                 'DHK',
                 style: TextStyle(
                   fontFamily: 'Sofia Pro',
-                  color: kFloatingButton,
+                  color: Colors.yellow[900],
                   fontSize: 35.0,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
               Text(
@@ -132,9 +132,9 @@ class _DetailScreenState extends State<DetailScreen> {
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Sofia Pro',
-                  fontSize: 10.0,
+                  fontSize: 13.0,
                   letterSpacing: 0.1,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w500,
                   height: 2.0,
                 ),
               ),
@@ -158,9 +158,9 @@ class _DetailScreenState extends State<DetailScreen> {
               '1hr 35m',
               style: TextStyle(
                 fontFamily: 'Gilroy',
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 12.0,
-                fontWeight: FontWeight.w300,
+                fontWeight: FontWeight.w900,
                 height: 1.5,
               ),
             ),
@@ -174,9 +174,9 @@ class _DetailScreenState extends State<DetailScreen> {
                 'SYL',
                 style: TextStyle(
                   fontFamily: 'Sofia Pro',
-                  color: kFloatingButton,
+                  color: Colors.yellow[900],
                   fontSize: 35.0,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
               Text(
@@ -184,9 +184,9 @@ class _DetailScreenState extends State<DetailScreen> {
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: 'Sofia Pro',
-                  fontSize: 10.0,
+                  fontSize: 13.0,
                   letterSpacing: 0.1,
-                  fontWeight: FontWeight.w300,
+                  fontWeight: FontWeight.w500,
                   height: 2.0,
                 ),
               ),
@@ -204,7 +204,7 @@ class _DetailScreenState extends State<DetailScreen> {
     );
     final Widget map = SvgPicture.asset(
       'assets/map.svg',
-      height: 158.0,
+      height: 200.0,
     );
     final Widget code = SvgPicture.asset(
       'assets/CODE.svg',
@@ -227,11 +227,11 @@ class _DetailScreenState extends State<DetailScreen> {
                   Padding(
                     padding: const EdgeInsets.only(left: 7.0, bottom: 5.0),
                     child: Icon(Entypo.aircraft_take_off,
-                        size: 23.0, color: kFloatingButton),
+                        size: 23.0, color: Colors.red[900]),
                   ),
                   Padding(
                       padding: const EdgeInsets.only(left: 15.0, bottom: 5.0),
-                      child: Text('Ticket Price', style: kTextStyle)),
+                      child: Text('Ticket Price')),
                   Padding(
                     padding: const EdgeInsets.only(left: 24.0),
                     child: RichText(
@@ -256,7 +256,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             text: ' 3500.00',
                             style: TextStyle(
                               fontFamily: 'Gilroy',
-                              color: kMainColor,
+                              color: Colors.black54,
                               fontSize: 23.0,
                               fontWeight: FontWeight.w800,
                             ),
