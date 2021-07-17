@@ -1,3 +1,4 @@
+import 'package:flight_booking/start.dart';
 import 'package:flutter/material.dart';
 import 'package:flight_booking/home_page.dart';
 import 'package:flight_booking/Authentication/login.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: WelcomeScreen.id,
       routes: {
-        WelcomeScreen.id: (context) => WelcomeScreen(),
+        WelcomeScreen.id: (context) => start(),
         HomePage.id: (context) => child,
         DetailScreen.id: (context) => DetailScreen(),
         AddFlightScreen.id: (context) => AddFlightScreen(),
