@@ -5,15 +5,24 @@ import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flight_booking/home_page.dart';
 import 'package:framy_annotation/framy_annotation.dart';
 
+import 'package:firebase_auth/firebase_auth.dart';
+
+import 'routes.dart';
+
 @framyWidget
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
+
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+  bool isSubmitting = false;
   AnimationController _controller;
 
   Animation _logoAnimation;
@@ -73,12 +82,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ),
               _customTextfield(
-                  labelName: 'Email',
+                labelName: 'Email',
+                  controller: _emailController,
+                  enable: isSubmitting,
                   labelIcon: Entypo.email,
                   keybordtype: TextInputType.emailAddress,
                   obscure: false),
               _customTextfield(
                   labelName: 'Password',
+                  controller: _passwordController,
+                  enable: isSubmitting,
                   labelIcon: SimpleLineIcons.lock,
                   keybordtype: TextInputType.text,
                   obscure: true),
@@ -96,7 +109,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       {@required String labelName,
       @required IconData labelIcon,
       @required TextInputType keybordtype,
-      @required bool obscure}) {
+      @required bool obscure, TextEditingController controller, bool enable}) {
     return Container(
       height: _inputAnimation.value,
       padding: EdgeInsets.only(bottom: 10.0),
@@ -183,8 +196,23 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               height: MediaQuery.of(context).size.height * 0.03,
             ),
             GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, HomePage.id);
+              onTap: () async {
+                // try {
+                //   FirebaseUser user =
+                //   (await FirebaseAuth.instance.signInWithEmailAndPassword(
+                //     email: _emailController.text,
+                //     password: _passwordController.text,
+                //   )).user;
+                //   if (user != null) {
+                //     Navigator.of(context).pushNamed(AppRoutes.home);
+                //   }
+                // } catch (e) {
+                //   print(e);
+                //   _emailController.text = "";
+                //   _passwordController.text = "";
+                // }
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
               },
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.07,

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "834055513495",
-    "project_id": "flightbooking-9f445",
-    "storage_bucket": "flightbooking-9f445.appspot.com"
+    "project_number": "34005195660",
+    "project_id": "justfly-40aff",
+    "storage_bucket": "justfly-40aff.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:834055513495:android:ce9c274413b9216ca7d0d2",
+        "mobilesdk_app_id": "1:34005195660:android:c33df581e67b55a9d894a9",
         "android_client_info": {
           "package_name": "com.showkhin.flightbooking"
         }
       },
       "oauth_client": [
         {
-          "client_id": "834055513495-qgtdn42fjgav5rtllnt9kt86p5ph38mc.apps.googleusercontent.com",
+          "client_id": "34005195660-4rajcd9e08fa6paclfk6kt27n77rk8ur.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDHXxmsn4EBiUlQAHbaWAd10kpgVKPmbS8"
+          "current_key": "AIzaSyC3UIUCNtL1Eabb1-xLi-o0Kus7YtmbnqM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "834055513495-qgtdn42fjgav5rtllnt9kt86p5ph38mc.apps.googleusercontent.com",
+              "client_id": "34005195660-4rajcd9e08fa6paclfk6kt27n77rk8ur.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

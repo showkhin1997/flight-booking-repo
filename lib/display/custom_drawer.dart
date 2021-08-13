@@ -1,3 +1,4 @@
+import 'package:flight_booking/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flight_booking/constants.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -126,7 +127,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.deepPurple,
+      color: Colors.orange[900],
       child: SafeArea(
         child: Theme(
           data: ThemeData(brightness: Brightness.dark),
@@ -139,7 +140,14 @@ class MyDrawer extends StatelessWidget {
               children: [
                 IconButton(
                   icon: Icon(Icons.close),
-                  onPressed: () => CustomDrawer.of(context).close(),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => HomePage(
+                                  header: null,
+                                )));
+                  },
                   color: Colors.white,
                   iconSize: 30.0,
                 ),
@@ -168,7 +176,7 @@ class MyDrawer extends StatelessWidget {
                       fontFamily: 'Gilroy',
                       fontSize: 18.0,
                       letterSpacing: 1.0,
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),

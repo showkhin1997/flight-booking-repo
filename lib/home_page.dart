@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:framy_annotation/framy_annotation.dart';
+import 'display/custom_drawer.dart';
 import 'display/header.dart';
 import 'display/title.dart';
 import 'package:flight_booking/add_flight_screen.dart';
@@ -75,6 +76,17 @@ class _HomePageState extends State<HomePage>
                     scale: _profilePictureAnimation.value,
                     child: widget.header),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+                ListTile(
+                  leading: Icon(Icons.menu),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CustomDrawer(
+                                  child: null,
+                                )));
+                  },
+                ),
                 Transform.scale(
                     scale: _contentAnimation.value,
                     child: HeadTitle(title: 'My Flights')),

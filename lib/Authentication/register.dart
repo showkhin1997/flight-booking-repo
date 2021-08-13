@@ -1,6 +1,11 @@
 import 'package:flight_booking/Authentication/login.dart';
 import 'package:flutter/material.dart';
 
+import 'package:firebase_auth/firebase_auth.dart';
+
+import '../home_page.dart';
+import 'routes.dart';
+
 class Register extends StatefulWidget {
   @override
   _RegisterViewState createState() => _RegisterViewState();
@@ -155,25 +160,24 @@ class _RegisterViewState extends State<Register> {
           ),
         ),
         onPressed: () async {
-          // try {
-          //   FirebaseUser user = (await FirebaseAuth.instance
-          //       .createUserWithEmailAndPassword(
-          //           email: _emailController.text,
-          //           password: _passwordController.text,)).user;
-          //   if(user != null){
-          //     UserUpdateInfo updateUser = UserUpdateInfo();
-          //     updateUser.displayName = _usernameController.text;
-          //     user.updateProfile(updateUser);
-          //     Navigator.of(context).pushNamed(AppRoutes.menu);
-          //   }
-          // } catch (e) {
-          //   print(e);
-          //   _usernameController.text = "";
-          //   _passwordController.text = "";
-          //   _repasswordController.text = "";
-          //   _emailController.text = "";
-          //   // TODO: alertdialog with error
-          // }
+          try {
+            FirebaseUser user = (await FirebaseAuth.instance
+                .createUserWithEmailAndPassword(
+                email: _emailController.text,
+                password: _passwordController.text,)).user;
+            if(user != null){
+               UserUpdateInfo updateUser = UserUpdateInfo();
+               updateUser.displayName = _usernameController.text;
+               user.updateProfile(updateUser);
+               Navigator.of(context).pushNamed(AppRoutes.home);
+            }
+          } catch (e) {
+            print(e);
+            _usernameController.text = "";
+            _passwordController.text = "";
+            _repasswordController.text = "";
+            _emailController.text = "";
+          }
         },
       ),
     );
@@ -250,3 +254,5 @@ class _RegisterViewState extends State<Register> {
     );
   }
 }
+
+
